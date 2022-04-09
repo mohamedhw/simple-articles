@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Article List</h2>
+    <div class='articles'>
+      {% for instance in object_list %}
+        <div class='article'>
+          <h3><a href="{{instance.get_absolute_url}}">{{instance.title}}</a></h3>
+          <p>{{instance.snippet}}</p>
+          <p>{{instance.date}}</p>
+          <p class="author">Added By {{instance.author.username}}</p>
+        </div>
+      {% endfor %}
+    </div>
+{% endblock %}
