@@ -236,3 +236,16 @@ a.highlight:hover {
     background-color: #00dba0;
     color: #000
 }
+
+.search-span {
+    font-size: medium;
+    font-weight: bold;
+    color: #00bda0
+}
+
+
+.search-input {
+    background: none;
+    color:#00bda0;
+    border: none;
+}

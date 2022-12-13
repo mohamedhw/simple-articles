@@ -32,3 +32,11 @@ def articel_create(request):
         'form': form
     }
     return render(request, 'Articels/articel_create.html', context)
+
+def search_view(request):
+    query = request.GET.get('q')
+    qs = Article.objects.search(query=query)
+    context = {
+        "qs": qs
+    }
+    return render(request, "Articels/search.html", context)
